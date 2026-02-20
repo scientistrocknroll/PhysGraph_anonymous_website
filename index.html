@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CVPR Paper">
+  <meta name="keywords" content="3D Gaussian Splatting, 3D Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Title</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <!-- select -->
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/app.css">
+  <link rel="stylesheet" href="./static/css/select.css">
+  <script src="./static/js/select.js"></script>
+  <!-- for image slider -->
+  <script src="./static/js/video_comparison.js"></script>
+  <link rel="stylesheet" href="./static/css/dics.min.css">
+  <script src="./static/js/dics.min.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', domReady);
+      function domReady() {
+          for (const e of document.querySelectorAll(".b-dics")) {
+              new Dics({
+                  container: e,
+                  textPosition: "top"
+              });
+          }
+      }
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PhysGraph: Physically-Grounded Graph-Transformer Policies for Bimanual Dexterous Hand–Tool–Object Manipulation</h1>
+          <div class="is-size-3 publication-authors">
+            <span class="author-block">
+              <!--HAHA<sup>1</sup>, HAHA<sup>1</sup>, HAHA<sup>1</sup>--> </span> 
+          </div>
+
+          <div class="is-size-3 publication-authors">
+            <span class="author-block">Anonymous Submission</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-large is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-large is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. 
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-large is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Bimanual dexterous manipulation, particularly involving complex tool use, remains a formidable challenge in embodied AI due to the high-dimensional state space 
+          and sophisticated contact dynamics required to coordinate multi-fingered hands. Existing state-of-the-art (SOTA) methods typically rely on global policy that 
+          treat the system state as a flattened vector, thereby discarding the rich structural and topological information inherent to articulated hands. 
+          To address this, we present PhysGraph, a novel physically-grounded graph-transformer policy designed explicitly for challenging bimanual hand-tool-object manipulation. 
+          Unlike prior works, we formulate the bimanual system as a kinematic graph and introduce a per-link tokenization strategy that preserves fine-grained local state 
+          information. Crucially, we propose a physically-grounded bias generator that injects learning-based structural priors—including kinematic spatial distance, 
+          dynamic contact states, geometric proximity, and anatomical properties—directly into the attention mechanism. This allows the policy to explicitly reason about 
+          physical connectivity and interaction logic rather than learning it implicitly from sparse rewards. Extensive experiments on the OakInk2 dataset demonstrate that 
+          PhysGraph significantly outperforms baselines in manipulation precision and task success rates. Furthermore, the inherent topological flexibility of our architecture 
+          enables zero-shot generalization to unseen tool/object geometries, and embodiment-agnostic deployment across diverse robotic hands (Shadow, Allegro, Inspire).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--/ Overview. -->
+
+
+    <center>
+        <h2 class="title is-2">Contributions</h2>
+        <div class="content has-text-justified">
+            <div class="content has-text-justified">
+                <p>
+                  <li>We propose PhysGraph, the first graph-transformer policy for high-DoF challenging bimanual dexterous tool-use, which explicitly models the hand-tool-object interactions as a dynamic kinematic graph and processes per-link tokenized multi-model observations.</li>
+                  <li>We introduce a novel Physically-Grounded Bias Generator that injects learning-based structural priors into transformer attention, including spatial/topological bias, edge-type bias, geometric proximity bias, and anatomical priors via head-specific masking, enabling the policy to learn physically plausible tool-use manipulation precisely.</li>
+                  <li>Extensive experiments on challenging bimanual tool-use tasks demonstrate that PhysGraph significantly outperforms SOTA baseline in success rate and motion fidelity, supports zero-shot generalization to unseen tool/object in different tasks, and is embodiment-agnostic to popular robotic dex-hands (Shadow, Allegro, Inspire).</li>
+                </p>
+              </div>
+          </div>
+
+
+    <center>
+        <h2 class="title is-2">Overview</h2>
+        <div class="content has-text-justified">
+            <div class="content has-text-justified">
+                <p>
+                  (a) Physical Graph & Tokenization: The bimanual workspace is modeled as a kinematic graph where nodes represent links of the left/right hands, tools, and objects. 
+                  Nodes are connected by static edges (bones) and dynamic edges (contact). State-based multi-modal observations for each link are processed into parallel input tokens. 
+                  (b) Physically-Grounded Bias Generator: This module computes four distinct biases, which are aggregated into a composite bias matrix. These biases are applied 
+                  via Head-Specific Masking, allowing different attention heads to focus on specific physical relationships. 
+                  (c) Graph Transformer Encoder: The tokenized inputs are processed by the Transformer encoder where the Multi-Head Attention (MHA) is modulated by the generated bias in (b). 
+                  (d) Output Heads: The globally encoded [POL] token is passed to MLP heads to predict the policy action distribution and value function.
+                </p>
+              </div>
+              <div class="b-dics" style="float: center">
+                <img id="overview" src="./pipeline.png", class="img-spacing">
+              </div>
+          </div>
+
+
+
+
+    <center>
+      <h2 class="title is-2">Results</h2>
+      <h2 class="subtitle is-3"> Bimanual Tool-Use Tasks </h2>
+      <ul class="nav nav-pills nav-justified" id="video-result-view-ul" style="width: 60%">
+        <li role="presentation" class="active"><a href="javascript: void(0);"
+            onclick="ChangeEpoch(0,0);">Slice bread with a chop knife</a>
+        </li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch(0,1);">Shear paper with scissors</a></li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch(0,2);">Brush whiteboard with a brush</a></li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch(0,3);">Pour water to a mug from aother mug</a></li>
+      </ul>
+      
+        <div>
+          <!--video class="video" id="video_scene" loop playsinline autoPlay muted
+          src="./static/results/lego/video/500.mp4" onplay="resizeAndPlay(this)"></video-->
+          <video class="video" id="video_tum" loop playsinline autoPlay muted
+          src="./static/results/artimano/083f7@0_titled.mp4"></video>
+          <button id="play_pause_btn_tum">Play</button>
+          <input type="range" id="video_progress_tum" value="0" min="0" step="0.1">
+          <!--canvas class="videoMerge" id="video_scene_merge"></canvas-->
+        </div>
+
+
+        <h2 class="subtitle is-3"> Zero-Shot Policy Generation </h2>
+        <ul class="nav nav-pills nav-justified" id="video-result-view-ul-bonn" style="width: 60%">
+          <li role="presentation" class="active"><a href="javascript: void(0);"
+              onclick="ChangeEpoch2(1,0);">Train on 817fb@0 (chop-knife cut bread)
+Validate on 9fc3e@0 (fruit-knife cut apple)</a>
+          </li>
+          <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch2(1,1);">Train on e1fa6@0 
+Validate on 66c7f@0 (brush whiteboard)
+</a></li>
+          <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch2(1,2);">Train on 1292e@0
+Validate on b9695@0 (pour water)
+</a></li>
+        </ul>
+        
+          <div>
+            <!--video class="video" id="video_scene" loop playsinline autoPlay muted
+            src="./static/results/lego/video/500.mp4" onplay="resizeAndPlay(this)"></video-->
+            <video class="video" id="video_bonn" loop playsinline autoPlay muted
+            src="./static/results/zeroshot/9fc3e@0_titled.mp4"></video>
+            <button id="play_pause_btn_bonn">Play</button>
+            <input type="range" id="video_progress_bonn" value="0" min="0" step="0.1">
+            <!--canvas class="videoMerge" id="video_scene_merge"></canvas-->
+          </div>
+
+
+      <h2 class="subtitle is-3"> Embodiment-Agnostic Validation </h2>
+      <ul class="nav nav-pills nav-justified" id="video-result-view-ul-agn" style="width: 60%">
+        <li role="presentation" class="active"><a href="javascript: void(0);"
+            onclick="ChangeEpoch3(2,0);">Slice bread with a chop knife (Shadow Hand)</a>
+        </li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch3(2,1);">Shear paper with scissors (Allegro Hand)</a></li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch3(2,2);">Brush whiteboard with a brush (Shadow Hand)</a></li>
+        <li role="presentation"><a href="javascript: void(0);" onclick="ChangeEpoch3(2,3);">Pour water to a mug from aother mug (Shadow Hand)</a></li>
+      </ul>
+      
+        <div>
+          <!--video class="video" id="video_scene" loop playsinline autoPlay muted
+          src="./static/results/lego/video/500.mp4" onplay="resizeAndPlay(this)"></video-->
+          <video class="video" id="video_agn" loop playsinline autoPlay muted
+          src="./static/results/multiembodiment/083f7@0_shadow_titled.mp4"></video>
+          <button id="play_pause_btn_agn">Play</button>
+          <input type="range" id="video_progress_agn" value="0" min="0" step="0.1">
+          <!--canvas class="videoMerge" id="video_scene_merge"></canvas-->
+        </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {},
+}</code></pre>
+  </div>
+</section>
+
+
+</body>
+</html>
